@@ -1,0 +1,146 @@
+/* Global style sebagai selektor universal gaya ke semua elemenn*/
+* {
+  box-sizing: border-box;
+}
+
+/* Body styles, font default dan menghapus padding dan margin agar elemennya tidak ada jarak di luar dan didalam */
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Heading styles */
+h2, h3 {
+  color: #820000;
+}
+
+/* Footer styles */
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #820000;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Navigation Links styles  */
+nav a {
+  font-size: 18px;
+ 
+  font-weight: 400;
+  text-decoration: none;
+ 
+  color: white;
+}
+
+/* Pseudo-class yang menerapkan gaya ketika pengguna mengarahkan kursor ke link.
+  Membuat teks menjadi tebal saat di-hover. */
+nav a:hover {
+  font-weight: bold;
+}
+
+/* Profile Header Styles, Mengatur gaya untuk elemen <header>
+  yang berada di dalam elemen dengan kelas .profile. */
+.profile header {
+  text-align: center;
+}
+
+/* Featured Image Styles, Mengatur gaya
+untuk elemen dengan kelas .featured-image. */
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* Profile Image Styles,  Mengatur gaya untuk semua elemen <img> yang berada di dalam elemen dengan kelas .profile.*/
+.profile img {
+  max-width: 200px;
+}
+
+
+/* Card Styles, Mengatur gaya untuk elemen dengan kelas .card.*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
+/* Jumbotron Styles */
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #820000;
+  text-align: center;
+  color: white;
+}
+ 
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+ 
+nav li {
+  list-style-type: none;
+}
+ 
+nav {
+  background-color: #820000;
+  padding: 5px;
+ 
+  position: sticky;
+  top: 0;
+}
+ 
+main {
+  padding: 20px;
+ 
+  display: flex;
+  gap: 1.5rem;
+}
+ 
+#content {
+  flex: 5;
+ 
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+ 
+aside {
+  flex: 1;
+}
+ 
+header {
+  display: inline;
+}
+
+/* Kode ini memastikan bahwa tata letak dan elemen situs web Anda berubah secara responsif tergantung pada ukuran layar pengguna, 
+humemberikan pengalaman pengguna yang optimal pada berbagai perangkat, dari desktop hingga tablet dan ponsel. */
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+ 
+  main aside {
+    align-self: center;
+  }
+}
+ 
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+ 
+  main aside {
+    align-self: stretch;
+  }
+}
